@@ -1,18 +1,17 @@
-[Front-end styleguide](/README.md) > [1. Working with JavaScript](/)
+[Front-end styleguide](/README.md) > [1. Working with JavaScript](/doc/javascript)
 
-## JavaScript
+## Index
+1. Javacript
+  1. [Guidelines Générales](#12-guidelines-générales)
+  2. [Conventions de nommage](#11-conventions-de-nommage)
+  3. [TODO] Linters
+  4. [TODO] Code style
+  5. [TODO] Tooling
+  6. [TODO] Librairies
 
-### Index
-1.1 [Guidelines Générales](#guidelines-generales)
-1.2 [Conventions de nommage](#conventions-de-nommage)
-1.3 [TODO] Linters
-1.4 [TODO] Code style
-1.5 [TODO] Tooling
-1.6 [TODO] Librairies
+## 1.1 Guidelines générales
 
-### 1.1 Guidelines générales
-
-**Version de JavaScript**
+#### Version de JavaScript**
 Veiller à toujours écrire en JavaScript ES2015+, compilé via [Babel](https://babeljs.io/).
 
 Un peu perdu avec les derniers ajouts au langages ? Commencer par comprendre et apprendre:
@@ -24,7 +23,7 @@ Un peu perdu avec les derniers ajouts au langages ? Commencer par comprendre et 
 
 puis, graduellement, les autres nouveautés.
 
-**Séparer son code en modules**
+#### Séparer son code en modules
 Vu que nous avons sous la main une version moderne du language, il est possible d'utiliser les modules ES2015 pour organiser son code.
 :white_check_mark: Séparer son code en un ou plusieurs modules, par "concern". 
 
@@ -43,7 +42,7 @@ components
 :white_check_mark: Rester libre d'organiser son code comme on le souhaite, mais le séparer en modules quand c'est nécessaire,
 ou pour éviter d'avoir trop de lignes par fichier.
 
-**Séparer sa logique en petites fonctions, correctement nommées**
+#### Séparer sa logique en petites fonctions, correctement nommées
   Les fonctions sont à nommer en lowerCamelCase. Essayer de trouver un nom court, et descriptif.
   
   :white_check_mark: Des fonctions bien nommées font presque office de documentation.
@@ -62,7 +61,7 @@ ou pour éviter d'avoir trop de lignes par fichier.
     }
   ```
 
-**Extraire son code en fonctions génériques**
+#### Extraire son code en fonctions génériques
   :white_check_mark: Essayer d'extraire la logique qui paraît générique dans des modules "utilitaires" :
   ```
   Une fonction générique, (fonction "capitalize" par ex.), devrait être extraite
@@ -74,7 +73,7 @@ ou pour éviter d'avoir trop de lignes par fichier.
    qu'on utilise d'un projet à l'autre )
   
 
-**Essayer d'utiliser des fonctions pures**
+#### Essayer d'utiliser des fonctions pures
 Sans vouloir imposer un style de code trop fonctionnel, essayer de créer des fonctions "pures" quand c'est possible.
 
 Une fonction pure :
@@ -90,9 +89,9 @@ Mais essayons de les garder sous contrôle, en :
       en le déclarant en haut du fichier (généralement sous la forme d'un object), et indiquer explicitement les fonctions qui le mutent.
     - :white_check_mark: Extraire ce qui peut être extrait en une fonction pure, et garder tout ce qui est impure séparé.
 
-### 1.2 Conventions de nommage
+## 1.2 Conventions de nommage
 
-*** Fichiers ***
+#### Fichiers
 Les fichiers JavaScript sont nommés en snake_case, pour :
 - :white_check_mark: Eviter les problèmes entre OSX et Unix
 - :white_check_mark: Suivre la convention Rails
@@ -101,12 +100,12 @@ Dans certains cas, il peut être utile d'ajouter un suffixe à un nom de fichier
 - `endpoints.const.js` Indique que c'est un fichier contenant uniquement des constantes.
 - `users.loader.js` Indique que c'est du code utilisé pour récupérer de la donnée via une requête HTTP
 
-*** Fonctions, Variables ***
+#### Fonctions, Variables
 Les fonctions JavaScript doivent être en lowerCamelCase, pour respecter la convention générale.
 Les noms de variable aussi, **même les constantes** (vu qu'elles seront déclarées via `const` [TODO: Link to const])
 Les noms de Constructeurs, ou toute fonction servant à instancier quelque chose, doivent être en UpperCamelCase.
 
-*** Composants React ***
+#### Composants React
 Les fichiers de composant React sont également à nommer en `.js`. Pas besoin d'introduire un nouveau format, même avec l'utilisation du JSX.
 
 
