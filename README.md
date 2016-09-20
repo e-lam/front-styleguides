@@ -6,7 +6,7 @@ Work in progress, PR et issues bienvenues :).
 
 ## Index
 
-1. JavaScript
+1. [JavaScript](/doc/javascript)
   1. [Guidelines Générales](/doc/javascript/#11-guidelines-générales)
   2. [Conventions de nommage](/doc/javascript/#12-conventions-de-nommage)
   3. [TODO] Linters
